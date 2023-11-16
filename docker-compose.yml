@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  db:
+    image: redis/redis-stack:7.2.0-v6
+    container_name: db
+    ports:
+      - 8001:8001
+      - 6379:6379
+    volumes:
+      - ./storage/redis/db/data:/data
