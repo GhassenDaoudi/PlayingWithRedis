@@ -24,6 +24,10 @@ https://hub.docker.com/r/redis/redis-stack/
 
 https://github.com/redis/node-redis/tree/a8b81bdd01329252466eb1dd608b2a92b960c3ae/packages/json
 
+## Elysiajs
+
+https://elysiajs.com/quick-start.html
+
 ## bun
 
 https://bun.sh/ \
