@@ -1,10 +1,10 @@
-import client from "./DBClient";
+import set from "./features/json/set";
 
 const data = Bun.file("users.json");
 
 export default function seed() {
   data.json().then((users: IUser[]) => {
     // json set
-    client.json.set(`users`, "$", { data: users as any });
+    set(`users`, "$", { data: users });
   });
 }
