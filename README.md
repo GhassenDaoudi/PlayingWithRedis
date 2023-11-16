@@ -6,6 +6,11 @@
   - [x] bunx create-vite
 - [x] setup redis
 
+# Features
+
+- [ ] JSON
+  - [x] set
+
 # Links
 
 ## Redis
@@ -13,7 +18,11 @@
 https://www.npmjs.com/package/redis \
 https://redis.io/docs/install/install-stack/docker/ \
 https://redis.io/resources/modules/ \
-https://hub.docker.com/r/redis/redis-stack/ \
+https://hub.docker.com/r/redis/redis-stack/
+
+### Redis JSON
+
+https://github.com/redis/node-redis/tree/a8b81bdd01329252466eb1dd608b2a92b960c3ae/packages/json
 
 ## bun
 

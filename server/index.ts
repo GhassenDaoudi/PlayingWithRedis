@@ -1,25 +1,19 @@
-import DBClient from "./DBClient";
+seed();
+import client from "./src/DBClient";
+import search from "./src/features/search";
+import seed from "./src/seed";
 
-await DBClient.set("key", "value");
-const value = await DBClient.get("key");
-console.log(value);
-await DBClient.disconnect();
-Bun.serve({
-  port: "8080",
-  fetch(request, server) {
-    const url = new URL(request.url);
-    switch (url.pathname) {
-      case "/":
-        return new Response("hello from home");
-      case "/search":
-        return new Response("hellow from search");
-      case "/json":
-        return new Response("JSON");
-      case "/bloom":
-        return new Response("bloom filter");
-      default:
-        break;
-    }
-    return new Response("404!");
-  },
+import { Elysia } from "elysia";
+
+const app = new Elysia().get("/", () => "Hello Elysia");
+app.get("/", () => "hello from home");
+app.get("/search", search);
+app.get("/json", () => "json");
+app.get("/bloom", () => "bloom");
+
+app.listen(8080);
+app.onStop(() => {
+  client.disconnect();
 });
+
+console.log(`server is running at ${app.server?.hostname}:${app.server?.port}`);
