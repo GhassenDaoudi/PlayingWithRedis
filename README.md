@@ -8,7 +8,7 @@
 
 # Features
 
-- [ ] JSON
+- [x] JSON
   - [x] set
   - [x] get
   - [x] append
