@@ -10,6 +10,7 @@
 
 - [ ] JSON
   - [x] set
+  - [x] get
 
 # Links
 

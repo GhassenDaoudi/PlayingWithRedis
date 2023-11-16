@@ -1,5 +1,6 @@
 seed();
 import client from "./src/DBClient";
+import getJSONData from "./src/features/getJSONData";
 import search from "./src/features/search";
 import seed from "./src/seed";
 
@@ -8,7 +9,7 @@ import { Elysia } from "elysia";
 const app = new Elysia().get("/", () => "Hello Elysia");
 app.get("/", () => "hello from home");
 app.get("/search", search);
-app.get("/json", () => "json");
+app.get("/json", getJSONData);
 app.get("/bloom", () => "bloom");
 
 app.listen(8080);
