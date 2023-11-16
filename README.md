@@ -1,4 +1,5 @@
 # Playing with redis
 
-[ ] server
-[ ] web - bunx create-vite
+- [ ] server
+- [ ] web
+  - [x] bunx create-vite
