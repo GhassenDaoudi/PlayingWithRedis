@@ -11,6 +11,8 @@
 - [ ] JSON
   - [x] set
   - [x] get
+  - [x] append
+  - [x] len
 
 # Links
 
